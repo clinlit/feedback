@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Privacy or security concern
+    url: mailto:hello@clinlit.com
+    about: Email us privately. Don't post privacy or security issues here; issues are public.
+  - name: Anything confidential
+    url: mailto:hello@clinlit.com
+    about: Questions involving personal health information or your organisation's confidential work.

@@ -1,0 +1,37 @@
+name: Data problem
+description: A trial or article is missing, outdated or wrong.
+title: "[Data] "
+labels: ["data", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ClinLit AI uses periodic snapshots of ClinicalTrials.gov (interventional and expanded-access studies, excluding
+        Phase 4) and PubMed (articles from 2010 onwards that have an abstract), so very recent changes may not be in it yet.
+        **Issues are public.** Don't include personal health information or anything confidential.
+  - type: input
+    id: ids
+    attributes:
+      label: Trial or article
+      description: NCT ID, PMID or link.
+      placeholder: NCT02951156
+    validations:
+      required: true
+  - type: dropdown
+    id: kind
+    attributes:
+      label: The problem
+      options:
+        - Missing
+        - Outdated
+        - Wrong
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: details
+    attributes:
+      label: Details
+      description: What ClinLit AI shows and what the source (ClinicalTrials.gov, PubMed) says.
+    validations:
+      required: true

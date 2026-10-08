@@ -1,0 +1,44 @@
+name: Wrong or incomplete answer
+description: ClinLit AI gave an answer that was wrong, incomplete or badly sourced.
+title: "[Answer] "
+labels: ["wrong-answer", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks: this is the feedback that improves ClinLit AI the most.
+        **Issues are public.** Don't include personal health information or anything confidential to your organisation.
+  - type: textarea
+    id: question
+    attributes:
+      label: Your question
+      description: What you asked, as you typed it (or close to it). Include earlier messages if it was a follow-up.
+      placeholder: How many recruiting phase 3 trials of pembrolizumab are there?
+    validations:
+      required: true
+  - type: textarea
+    id: wrong
+    attributes:
+      label: What was wrong
+      description: The part of the answer that was wrong or missing. Paste the relevant part of the answer if you can.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What you expected
+      description: The right answer, or where you'd expect to find it, if you know.
+  - type: input
+    id: ids
+    attributes:
+      label: Trials or articles involved
+      description: NCT IDs, PMIDs or links, if relevant.
+      placeholder: NCT02951156, PMID 31562796
+  - type: input
+    id: when
+    attributes:
+      label: When you asked
+      description: Date and approximate time, with your time zone. It helps us find what happened.
+      placeholder: 2026-10-08 14:30 PDT
+    validations:
+      required: true
